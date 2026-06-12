@@ -36,6 +36,7 @@ namespace МИЖОРО
             textBox6.Clear();
             textBox7.Clear();
             textBox8.Clear();
+            chart1.Series[0].Points.Clear();
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
@@ -73,13 +74,13 @@ namespace МИЖОРО
         private void button1_Click(object sender, EventArgs e)
         {
 
-            int xn = int.Parse(textBox1.Text);//численность
+            long xn = long.Parse(textBox1.Text);//численность
             double a = double.Parse(textBox2.Text);//кофф роста
-            int c = int.Parse(textBox3.Text);//отлов
+            long c = long.Parse(textBox3.Text);//отлов
             int count = (int.Parse(textBox4.Text))+1;//длительность
             double b = double.Parse(textBox8.Text);//коэфициент перенаселённости
 
-            int startXN = xn;
+            long startXN = xn;
 
             double[] x = new double[count];
             double[] y = new double[count];
